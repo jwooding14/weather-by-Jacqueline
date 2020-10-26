@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://kit.fontawesome.com/b03610c3d2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class=background>
+
+            <div class="container">
+                <div class="searchBar">
+                    <form id="searching" class="form-inline">
+                        <div class="form-group mb-2 mx-sm-3">
+                            <input type="search" autocomplete="off" class="form-control" id="response"
+                                placeholder="🔎  Enter city" autofocus="on" />
+                        </div>
+                        <button type="search" id="find" class="btn btn-primary mb-2">Search</button>
+                    </form>
+                </div>
+                <div class="container">
+                    <div class="secondaryButton" id="position">
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-primary mb-2"> <span class="currentLocation"> My
+                                    Location</span>
+                            </button>
+
+                        </div>
+                    </div>
+                    <p>
+                    <p class="fc">
+                        <button class="btn btn-outline-info" id="celsiusButton">°C</button>
+                        <button class="btn btn-outline-info" id="fahrenheitButton">°F</button>
+                    </P>
+                    <div class="Data"></div>
+                    <div class="row">
+                        <div class="col-4">
+                            <p class="wind">
+                                <strong>Wind</strong>
+                                <br />
+                                10MPH
+                                <br />
+                                <br />
+                            </p>
+                            <p class="aqi">
+                                <strong>AQI</strong>
+                                <br />
+                                67
+                            </p>
+                        </div>
+
+                        <div class="col-4">
+                            <ul>
+                                <li id="date"></li>
+                            </ul>
+                            <ul>
+                                <h2>
+                                    <li class="city">Studio City</li>
+                                </h2>
+                            </ul>
+                            <ul>
+                                <li class="weather">Sunny ☀️</li>
+                            </ul>
+                            <ul>
+                                <li class="tempNow" id="tempNow"> 79°</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-4">
+                            <p class="humidity">
+                                <strong>Humidity</strong>
+                                <br />
+                                32%
+                                <br />
+                                <br />
+
+                            </p>
+
+                            <p class="rain">
+                                <strong>Rain</strong>
+                                </br>
+                                0%
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-group">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Sun</h3>
+                            <p class="card-emoji"> ☀️
+                            </p>
+                            <p class="day-temp">84°/60°
+                            </p>
+                            <p class="card-text">
+                            <p class="rainForecast">💧 0%
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Mon</h3>
+                            <p class="card-emoji"> 🌤
+                            </p>
+                            <p class="day-temp">82°/58°
+                            </p>
+                            <p class="card-text">
+                            <p class="rainForecast">💧 10%
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Tue</h3>
+                            <p class="card-emoji">🌦
+
+                            </p>
+                            <p class="day-temp">65°/52°
+                            </p>
+                            <p class="card-text">
+                            <p class="rainForecast">💧 40%
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title"> Wed</h3>
+                            <p class="card-emoji">🌦
+                            </p>
+                            <p class="day-temp">65°/53°
+                            </p>
+                            <p class="card-text">
+                            <p class="rainForecast">💧 60%
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Thu</h3>
+                            <p class="card-emoji">☀️
+                            </p>
+                            <p class="day-temp">78°/60°
+                            </p>
+                            <p class="card-text">
+                            <p class="rainForecast">💧 0%
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Fri</h3>
+                            <p class="card-emoji">☀️
+                            </p>
+                            <p class="day-temp">84°/60°
+                            </p>
+                            <p class="card-text">
+                            <p class="rainForecast">💧 0%
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="src/index.js"> </script>
+</body>
+
+</html>
