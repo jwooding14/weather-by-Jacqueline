@@ -9,79 +9,44 @@
   max-height: 800px;
   background-image: url(https://images.pexels.com/photos/1367180/pexels-photo-1367180.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 }
-.Data {
-  margin: -60px 0px -70px 0px;
-  padding: 0px 0px 50px 0px;
-}
 
-.secondaryButton {
-  padding: 20px;
-  margin: 0px auto;
-  display: block;
-}
-
-.currentLocation {
-  color: white;
-  text-emphasis: underline;
+.row {
+  margin-right: -50px;
+  margin-left: -50px;
 }
 
 li {
   font-size: 25px;
 }
 
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+
 .fc {
   text-align: right;
   margin: 0px;
-  padding: 0px 30px 0px 0px;
-  top: -80px;
+  padding: 0px 30px 20px 0px;
   position: relative;
-  font-weight: lighter;
-}
-
-.search-city {
-  padding: 80px 0px 0px 20px;
 }
 
 .wind {
-  margin: block;
-
   text-align: center;
-  padding: 100px 0px 10px 150px;
-  margin: 0px;
-  left: 0;
+  margin-top: 44px;
+  margin-bottom: 2rem;
+  margin-left: 0px;
   color: black;
   font-weight: bolder;
 }
 
 .aqi {
   text-align: center;
-  position: relative;
-  padding: 0px 0px 0px 145px;
-  margin: 0;
-  margin: block;
-}
-
-.humidity {
-  text-align: center;
-  position: relative;
-  padding: 90px 0px 0px 24px;
-  margin: 0;
-  margin: block;
-  right: 51px;
-}
-
-.rain {
-  text-align: center;
-  position: relative;
-  right: 116px;
-  padding: 10px 0px 100px 154px;
-  margin: 0;
-  margin: block;
-}
-
-ul {
-  list-style-type: none;
-  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 2rem;
+  margin-left: 25px;
+  color: black;
+  font-weight: bolder;
 }
 
 .city {
@@ -134,6 +99,7 @@ ul {
 .card-body {
   text-align: center;
   margin: 0 auto;
+  padding: 30px 30px 10px 20px;
 }
 
 .day-temp {
@@ -143,5 +109,28 @@ ul {
 }
 
 .searchBar {
-  padding: 30px 0px 0px 0px;
+  padding: 30px 20px 20px 20px;
+}
+
+#humidity {
+  text-align: center;
+  margin-top: 43px;
+  margin-bottom: 2rem;
+  margin-right: 25px;
+  color: black;
+  font-weight: bolder;
+  padding: 0px 0px 0px 25px;
+}
+#rain {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-right: 25px;
+  color: black;
+  font-weight: bolder;
+}
+
+#dateCity {
+  margin-top: 40px;
+  margin-left: 0px;
+  padding: 0px 40px 0px 0px;
 }
