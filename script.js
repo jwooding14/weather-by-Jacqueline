@@ -52,5 +52,15 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   console.log(response);
   let temperatureElement = document.querySelector("#tempNow");
+  let descriptionElement = document.querySelector(".weather");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let pressureElement = document.querySelector("#pressure");
+  let feelslikeElement = document.querySelector("#feelsLike");
   temperatureElement.innerHTML = `${temperature}°`;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  pressureElement.innerHTML = response.data.main.pressure;
+  feelslikeElement.innerHTML = response.data.main.feels_like;
 }
