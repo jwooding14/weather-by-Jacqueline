@@ -33,24 +33,6 @@ ul {
   position: relative;
 }
 
-.wind {
-  text-align: center;
-  margin-top: 44px;
-  margin-bottom: 2rem;
-  margin-left: 0px;
-  color: black;
-  font-weight: bolder;
-}
-
-.aqi {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 2rem;
-  margin-left: 25px;
-  color: black;
-  font-weight: bolder;
-}
-
 .city {
   padding: 0 auto;
   font-weight: 700;
@@ -118,4 +100,37 @@ ul {
   margin-top: 40px;
   margin-left: 0px;
   padding: 0px 40px 0px 0px;
+}
+li #humidity {
+  text-align: center;
+  margin-top: 43px;
+  margin-bottom: 2rem;
+  margin-right: 25px;
+  color: black;
+  padding: 0px 0px 0px 25px;
+}
+li #pressure {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-right: 25px;
+  color: black;
+  font-weight: bolder;
+}
+
+li #wind {
+  text-align: center;
+  margin-top: 44px;
+  margin-bottom: 2rem;
+  margin-left: 0px;
+  color: black;
+  font-weight: bolder;
+}
+
+li #feelsLike {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 2rem;
+  margin-left: 25px;
+  color: black;
+  font-weight: bolder;
 }
