@@ -62,5 +62,5 @@ function showTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   pressureElement.innerHTML = response.data.main.pressure;
-  feelslikeElement.innerHTML = response.data.main.feels_like;
+  feelslikeElement.innerHTML = Math.round(response.data.main.feels_like);
 }
