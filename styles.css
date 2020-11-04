@@ -11,6 +11,7 @@
 }
 body {
   text-align: center;
+  white-space: nowrap;
 }
 .row {
   margin-right: -50px;
