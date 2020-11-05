@@ -6,7 +6,7 @@
   border-color: black;
   border-radius: 3em;
   max-width: 800px;
-  max-height: 800px;
+  max-height: 870px;
   background-image: url(https://images.pexels.com/photos/1367180/pexels-photo-1367180.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 }
 
@@ -99,10 +99,14 @@ ul {
 #dateCity {
   margin-top: 40px;
   margin-left: 0px;
-  padding: 0px 40px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .data {
   text-align: center;
+}
+#date {
+  margin: -50px 0px 0px 0px;
 }
 
 li humidity {
