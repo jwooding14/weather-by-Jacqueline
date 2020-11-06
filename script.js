@@ -86,3 +86,19 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
+function searchLocation(position) {
+  let key = "c2a0308255fedbe7dd192fcd88e7b405";
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${key}$units=imperial`;
+  axios.get(url).then(showTemperature);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+searchCity("Los Angeles");
+
+let currentLocationButton = document.querySelector(".current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
