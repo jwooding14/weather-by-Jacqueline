@@ -9,10 +9,8 @@
   max-height: 870px;
   background-image: url(https://images.pexels.com/photos/1367180/pexels-photo-1367180.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 }
-
-.row {
-  margin-right: -50px;
-  margin-left: -50px;
+#pst {
+  font-size: 15px;
 }
 
 li {
@@ -29,7 +27,7 @@ ul {
 .fc {
   text-align: right;
   margin: 0px;
-  padding: 0px 30px 20px 0px;
+  padding: 0px 30px 0px 0px;
   position: relative;
 }
 
@@ -46,15 +44,17 @@ ul {
   padding: 0 auto;
   font-weight: 200;
   font-size: 35px;
+  text-transform: capitalize;
 }
 
 .tempNow {
   padding: 0px 0px 20px 0px;
   font-size: 75px;
+  text-align: center;
 }
 .card {
   margin: -40px 2px 0px 2px;
-  text-align: left;
+  text-align: center;
   max-height: 700px;
   border: skyblue;
   border-radius: 2em;
@@ -101,10 +101,9 @@ ul {
   margin-left: 0px;
   padding: 0px 0px 0px 0px;
   font-family: Arial, Helvetica, sans-serif;
-}
-.data {
   text-align: center;
 }
+
 #date {
   margin: -50px 0px 0px 0px;
 }
@@ -121,7 +120,7 @@ li pressure {
   text-align: center;
   margin-bottom: 2rem;
   margin-right: 25px;
-  color: black;
+  color: yellow;
   font-weight: bolder;
 }
 
@@ -141,4 +140,10 @@ li feelsLike {
   margin-left: 25px;
   color: black;
   font-weight: bolder;
+}
+
+.data {
+  text-align: left;
+  color: black;
+  margin: 73px 5px 5px -35px;
 }

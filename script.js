@@ -21,6 +21,9 @@ function formatDate(date) {
 
   let day = days[dayIndex];
 
+  let year = date.getFullYear();
+  let today = date.getDate();
+
   let monthIndex = date.getMonth();
   let months = [
     "January",
@@ -38,7 +41,8 @@ function formatDate(date) {
   ];
   let month = months[monthIndex];
 
-  return `${day}</br> ${month} ${hours}:${minutes}`;
+  return `${day} ${hours}:${minutes}</br> ${month} ${today}, ${year}</br>
+ <span id="pst">(Last update in CA PST)</span>`;
 }
 
 let dateElement = document.querySelector("#date");
