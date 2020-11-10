@@ -41,8 +41,8 @@ function formatDate(date) {
   ];
   let month = months[monthIndex];
 
-  return `${day} ${hours}:${minutes}</br> ${month} ${today}, ${year}</br>
- <span id="pst">(Last update in CA PST)</span>`;
+  return `${month} ${today}, ${year} </br>${day} ${hours}:${minutes}</br>
+ <span id="pst">(Last update in CA PST)</span> </br>`;
 }
 
 let dateElement = document.querySelector("#date");
@@ -89,12 +89,16 @@ function showTemperature(response) {
   let pressureElement = document.querySelector("#pressure");
   let feelslikeElement = document.querySelector("#feelsLike");
   let iconElement = document.querySelector("#icon");
-  temperatureElement.innerHTML = `${temperature}°`;
+
+  fahrenheitTemperature = response.data.main.temp;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature) + "°F";
+
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  pressureElement.innerHTML = response.data.main.pressure;
-  feelslikeElement.innerHTML = Math.round(response.data.main.feels_like);
+  pressureElement.innerHTML =
+    Math.round((response.data.main.pressure / 33.863886666667) * 100) / 100;
+  feelslikeElement.innerHTML = Math.round(response.data.main.feels_like) + "°F";
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -104,7 +108,29 @@ function showTemperature(response) {
   currentCity.innerHTML = response.data.name;
 }
 
-searchCity("Los Angeles");
-
 let currentLocationButton = document.querySelector(".current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let fahrenheitClickButton = document.querySelector("#fahrenheitButton");
+fahrenheitClickButton.addEventListener("click", displayFahrenheitTemp);
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#tempNow");
+
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature) + "°F";
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#tempNow");
+  let celsiusTemperature = (fahrenheitTemperature - 30) / 2;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature) + "°C";
+}
+
+let fahrenheitTemperature = null;
+
+let celsiusClickButton = document.querySelector("#celsiusButton");
+celsiusClickButton.addEventListener("click", displayCelsiusTemp);
+
+searchCity("Los Angeles");
