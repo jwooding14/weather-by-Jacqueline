@@ -98,7 +98,7 @@ ul {
 
 #dateCity {
   margin-top: 40px;
-  margin-left: 0px;
+  margin-left: -20px;
   padding: 0px 0px 0px 0px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
@@ -108,14 +108,6 @@ ul {
   margin: -50px 0px 0px 0px;
 }
 
-li humidity {
-  text-align: center;
-  margin-top: 43px;
-  margin-bottom: 2rem;
-  margin-right: 25px;
-  color: black;
-  padding: 0px 0px 0px 25px;
-}
 li pressure {
   text-align: center;
   margin-bottom: 2rem;
@@ -145,5 +137,11 @@ li feelsLike {
 .data {
   text-align: left;
   color: black;
-  margin: 73px 5px 5px -35px;
+  margin: 100px 5px 5px -35px;
+}
+.dataHumid {
+  text-align: center;
+  margin-top: -2px;
+  color: black;
+  margin-right: 4px;
 }
