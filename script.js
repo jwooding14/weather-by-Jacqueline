@@ -93,9 +93,11 @@ function displayForecast(response) {
                           forecast.weather[0].icon
                         }@2x.png"/> 
 
-                        <div class="weather-forecast-temperature"><strong>${Math.round(
+                        <div class="weather-forecast-temperature"><strong><span class="forecast-max">${Math.round(
                           forecast.main.temp_max
-                        )}° </strong> ${Math.round(forecast.main.temp_min)}°
+                        )}</span>° </strong><span class="forecast-min">${Math.round(
+      forecast.main.temp_min
+    )}</span>°
                    
                     </div>
                 </div> `;
@@ -156,18 +158,52 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 let fahrenheitClickButton = document.querySelector("#fahrenheitButton");
 fahrenheitClickButton.addEventListener("click", displayFahrenheitTemp);
 
-function displayFahrenheitTemp(click) {
+function displayFahrenheitTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#tempNow");
 
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature) + "°F";
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+
+  let forecastMax = document.querySelectorAll(".forecast-max");
+  forecastMax.forEach(function (item) {
+    let currentTemp = item.innerHTML;
+
+    item.innerHTML = Math.round((currentTemp * 9) / 5 + 32);
+  });
+
+  let forecastMin = document.querySelectorAll(".forecast-min");
+  forecastMin.forEach(function (item) {
+    let currentTemp = item.innerHTML;
+
+    item.innerHTML = Math.round((currentTemp + 9) / 5 + 32);
+  });
+
+  celsiusClickButtonClickButton.addEventListener("click", displayCelsiusTemp);
+  fahrenheitClickButton.removeEventListener("click", displayFahrenheitTemp);
 }
 
-function displayCelsiusTemp(click) {
+function displayCelsiusTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#tempNow");
   let celsiusTemperature = (fahrenheitTemperature - 30) / 2;
   temperatureElement.innerHTML = Math.round(celsiusTemperature) + "°C";
+
+  let forecastMax = document.querySelectorAll(".forecast-max");
+  forecastMax.forEach(function (item) {
+    let currentTemp = item.innerHTML;
+
+    item.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
+  });
+
+  let forecastMin = document.querySelectorAll(".forecast-min");
+  forecastMin.forEach(function (item) {
+    let currentTemp = item.innerHTML;
+
+    item.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
+  });
+
+  celsiusClickButton.removeEventListener("click", displayCelsiusTemp);
+  fahrenheitClickButton.addEventListener("click", displayFahrenheitTemp);
 }
 
 let fahrenheitTemperature = null;
