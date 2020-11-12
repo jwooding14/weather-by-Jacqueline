@@ -30,147 +30,68 @@
             </div>
 
             <div class="fc">
-        <a class="btn btn-primary" href="#" id="celsiusButton" role="button">°C</a>
-        <a class="btn btn-primary" href="#" id="fahrenheitButton" role="button">°F</a>
+                <a class="btn btn-primary" href="#" id="celsiusButton" role="button">°C</a>
+                <a class="btn btn-primary" href="#" id="fahrenheitButton" role="button">°F</a>
             </div>
 
 
 
-            
-                <div class= "row">
-                    <div class="col-4">
-                        <div class="data">
-<ul>
-</br>
-    <li>Wind <br />
-    <span id="wind"></span> mph</li></br>
+
+            <div class="row">
+                <div class="col-4">
+                    <div class="data">
+                        <ul>
+                            </br>
+                            <li>Wind <br />
+                                <span id="wind"></span> mph</li></br>
+                            <ul>
+                                <li>Pressure</br>
+                                    <span id="pressure"></span> in</li>
+                    </div>
+                </div>
+                <div id="dateCity" div class="col-4">
                     <ul>
-                       <li>Pressure</br>
-                    <span id="pressure"></span> in</li>
-                    </div>
-</div>
-                    <div id="dateCity" div class="col-4">
-                        <ul>
-                            <li id="date"></li>
-                        </ul>
-                        <ul>
-                            <h2>
-                                <li class="city">Los Angeles</li>
-                            </h2>
-                        </ul>
-                        <ul>
-                            <div class="weatherIcon">
-                            <img src="" id="icon" alt="" class="float-center"/>
+                        <li id="date"></li>
+                    </ul>
+                    <ul>
+                        <h2>
+                            <li class="city">Los Angeles</li>
+                        </h2>
+                    </ul>
+                    <ul>
+                        <div class="weatherIcon">
+                            <img src="" id="icon" alt="" class="float-center" />
                             <li class="weather"></li>
-                        </ul>
-                     
-                        <ul>
-                            <li class="tempNow" id="tempNow">
-                           </li>
-                           
-                        </ul>
-                    </div>
-                
+                    </ul>
 
-                    <div class="col-4">
- <div class="data">
-     <div class="dataHumid">
-                        <ul>
-                            <br/>
-                            <li>Humidity</br> 
-                           <span id="humidity"></span>%</li></br>
-                           <ul>
-<li> Feels like</br> <span id="feelsLike"></span></li>
-</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-group">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">Sun</h3>
-                        <p class="card-emoji"> ☀️
-                        </p>
-                        <p class="day-temp">84°/60°
-                        </p>
-                        <p class="card-text">
-                        <p class="rainForecast">💧 0%
-                    </div>
-                </div>
+                    <ul>
+                        <li class="tempNow" id="tempNow">
+                        </li>
 
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">Mon</h3>
-                        <p class="card-emoji"> 🌤
-                        </p>
-                        <p class="day-temp">82°/58°
-                        </p>
-                        <p class="card-text">
-                        <p class="rainForecast">💧 10%
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">Tue</h3>
-                        <p class="card-emoji">🌦
-
-                        </p>
-                        <p class="day-temp">65°/52°
-                        </p>
-                        <p class="card-text">
-                        <p class="rainForecast">💧 40%
-                        </p>
-                    </div>
+                    </ul>
                 </div>
 
 
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title"> Wed</h3>
-                        <p class="card-emoji">🌦
-                        </p>
-                        <p class="day-temp">65°/53°
-                        </p>
-                        <p class="card-text">
-                        <p class="rainForecast">💧 60%
-                        </p>
-                    </div>
-                </div>
-                
-
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">Thu</h3>
-                        <p class="card-emoji">☀️
-                        </p>
-                        <p class="day-temp">78°/60°
-                        </p>
-                        <p class="card-text">
-                        <p class="rainForecast">💧 0%
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">Fri</h3>
-                        <p class="card-emoji">☀️
-                        </p>
-                        <p class="day-temp">84°/60°
-                        </p>
-                        <p class="card-text">
-                        <p class="rainForecast">💧 0%
-                        </p>
-
+                <div class="col-4">
+                    <div class="data">
+                        <div class="dataHumid">
+                            <ul>
+                                <br />
+                                <li>Humidity</br>
+                                    <span id="humidity"></span>%</li></br>
+                                <ul>
+                                    <li> Feels like</br> <span id="feelsLike"></span></li>
                         </div>
                     </div>
                 </div>
             </div>
+           <div class="row weather-forecast" id="forecast">
+                </div>
+            </div>
         </div>
-       </div>
-        <script src="script.js"></script>
+    </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
