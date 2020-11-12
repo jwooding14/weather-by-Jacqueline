@@ -156,7 +156,6 @@ let currentLocationButton = document.querySelector(".current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let fahrenheitClickButton = document.querySelector("#fahrenheitButton");
-fahrenheitClickButton.addEventListener("click", displayFahrenheitTemp);
 
 function displayFahrenheitTemp(event) {
   event.preventDefault();
@@ -178,7 +177,7 @@ function displayFahrenheitTemp(event) {
     item.innerHTML = Math.round((currentTemp * 9) / 5 + 32);
   });
 
-  celsiusClickButtonClickButton.addEventListener("click", displayCelsiusTemp);
+  celsiusClickButton.addEventListener("click", displayCelsiusTemp);
   fahrenheitClickButton.removeEventListener("click", displayFahrenheitTemp);
 }
 
