@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-    <title>Weather</title>
+    <title>Weather Web App</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://kit.fontawesome.com/b03610c3d2.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -34,21 +34,19 @@
                 <a class="btn btn-primary" href="#" id="fahrenheitButton" role="button">°F</a>
             </div>
 
-
-
-
             <div class="row">
                 <div class="col-4">
                     <div class="data">
                         <ul>
                             </br>
-                            <li>Wind <br />
-                                <span id="wind"></span> mph</li></br>
+                            <li>Wind<br />
+                                <span id="wind"></span> mph </li></br>
                             <ul>
-                                <li>Pressure</br>
+                                <li>Pressure </br>
                                     <span id="pressure"></span> in</li>
                     </div>
                 </div>
+
                 <div id="dateCity" div class="col-4">
                     <ul>
                         <li id="date"></li>
@@ -71,7 +69,6 @@
                     </ul>
                 </div>
 
-
                 <div class="col-4">
                     <div class="data">
                         <div class="dataHumid">
@@ -85,12 +82,15 @@
                     </div>
                 </div>
             </div>
+
            <div class="row weather-forecast" id="forecast">
-                </div>
-            </div>
+                
+        </div>
+        </div>
         </div>
     </div>
-    </div>
+    
+    <div id= "endTag">Coded by Jacqueline Wooding</div>
     <script src="script.js"></script>
 </body>
 

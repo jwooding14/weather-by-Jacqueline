@@ -1,5 +1,5 @@
 .background {
-  margin: 30px 20px 50px 20px;
+  margin: 10px auto;
   background-size: cover;
   border: 10px solid;
   display: block;
@@ -9,19 +9,39 @@
   max-height: 870px;
   background-image: url(https://images.pexels.com/photos/1367180/pexels-photo-1367180.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 }
-#pst {
-  font-size: 15px;
-}
 
 li {
-  font-size: 25px;
   white-space: nowrap;
   text-align: center;
+  font-family: "Mukta", sans-serif;
+  position: relative;
 }
 
 ul {
   list-style-type: none;
   text-align: center;
+}
+
+.searchBar {
+  padding: 30px 20px 20px 20px;
+}
+
+#dateCity {
+  margin-top: 40px;
+  margin-left: -20px;
+  padding: 0px 0px 0px 0px;
+  text-align: center;
+}
+
+#pst {
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+#refresh {
+  font-weight: 600;
+  font-size: 15px;
 }
 
 .fc {
@@ -38,6 +58,8 @@ ul {
   color: black;
   text-transform: capitalize;
   white-space: nowrap;
+  font-size: 40px;
+  text-align: center;
 }
 
 .weather {
@@ -49,112 +71,60 @@ ul {
 
 .tempNow {
   padding: 0px 0px 20px 0px;
-  font-size: 75px;
+  font-size: 70px;
   text-align: center;
-}
-.card {
-  margin: -40px 2px 0px 2px;
-  text-align: center;
-  max-height: 700px;
-  border: skyblue;
-  border-radius: 2em;
-}
-
-.card-group {
-  padding: 0px 0px 0px 0px;
-  position: relative;
-  text-align: center;
-  max-width: 800px;
-  max-height: 500px;
-  margin: 0px auto;
-}
-
-.card-title {
-  font: helvetica;
-  font-weight: bold;
-  font-size: medium;
-  padding: 0px 15px 0px 0px;
-}
-
-.card-emoji {
-  font-size: 55px;
-}
-
-.card-body {
-  text-align: center;
-  margin: 0 auto;
-  padding: 30px 30px 10px 20px;
-}
-
-.day-temp {
-  font-size: 25px;
-  padding: 0px 0px 20px 0px;
-  position: relative;
-}
-
-.searchBar {
-  padding: 30px 20px 20px 20px;
-}
-
-#dateCity {
-  margin-top: 40px;
-  margin-left: -20px;
-  padding: 0px 0px 0px 0px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
+  font-weight: normal;
 }
 
 #date {
   margin: -50px 0px 0px 0px;
+  font-size: 30px;
+  text-align: center;
 }
 
 .weather-forecast-temperature {
   font-size: 25px;
 }
 
-.weather {
-  font-size: 30px;
+.forecast-max {
+  text-align: center;
+}
+
+.forecast-min {
+  text-align: center;
+  color: #48484a;
+}
+
+#update {
+  font-size: 15px;
 }
 
 h3 {
   font-size: 20px;
   text-align: center;
-}
-
-li pressure {
-  text-align: center;
-  margin-bottom: 2rem;
-  margin-right: 25px;
-  color: yellow;
-  font-weight: bolder;
-}
-
-li wind {
-  text-align: center;
-  margin-top: 44px;
-  margin-bottom: 2rem;
-  margin-left: 0px;
-  color: black;
-  font-weight: bolder;
-}
-
-li feelsLike {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 2rem;
-  margin-left: 25px;
-  color: black;
-  font-weight: bolder;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .data {
   text-align: left;
   color: black;
   margin: 100px 5px 5px -35px;
+  font-family: "Mukta", sans-serif;
+  font-weight: 600;
+  font-size: 25px;
 }
+
 .dataHumid {
   text-align: center;
-  margin-top: -2px;
+  margin-top: 0px;
   color: black;
-  margin-right: 4px;
+  margin-right: -8px;
+}
+#endTag {
+  text-align: center;
+}
+
+#forecast {
+  display: flex;
 }

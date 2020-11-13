@@ -1,13 +1,5 @@
-function formatDate(date) {
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
   let dayIndex = date.getDay();
   let days = [
     "Sunday",
@@ -41,8 +33,10 @@ function formatDate(date) {
   ];
   let month = months[monthIndex];
 
-  return `${month} ${today}, ${year} </br>${day} ${hours}:${minutes}</br>
- <span id="pst">(Last update in CA PST)</span> </br>`;
+  return `${month} ${today}, ${year} </br>  <span id="pst">as of </span> ${formatHours(
+    timestamp
+  )}
+  PST </br><span id="refresh">(Refresh for update)</span>`;
 }
 
 let dateElement = document.querySelector("#date");
@@ -52,16 +46,12 @@ dateElement.innerHTML = formatDate(currentTime);
 
 function formatHours(timestamp) {
   let date = new Date(timestamp);
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
 
-  return `${hours}:${minutes}`;
+  return `${date.toLocaleString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  })}`;
 }
 
 function search(event) {
@@ -85,6 +75,7 @@ function displayForecast(response) {
   for (let index = 0; index < 6; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += ` 
+  
                 <div class="col-2">
                    <h3>
                   ${formatHours(forecast.dt * 1000)}
@@ -161,7 +152,7 @@ function displayFahrenheitTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#tempNow");
 
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature) + "°F";
 
   let forecastMax = document.querySelectorAll(".forecast-max");
   forecastMax.forEach(function (item) {
@@ -211,3 +202,5 @@ let celsiusClickButton = document.querySelector("#celsiusButton");
 celsiusClickButton.addEventListener("click", displayCelsiusTemp);
 
 searchCity("Los Angeles");
+
+console.log(searchCity);
