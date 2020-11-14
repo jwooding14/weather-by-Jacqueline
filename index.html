@@ -1,97 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
     <title>Weather Web App</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://kit.fontawesome.com/b03610c3d2.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/b03610c3d2.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="background">
-        <div class="container">
-            <div class="searchBar">
-                <form id="searching" class="form-inline">
-                    <div class="form-group mb-2 mx-sm-3">
-                        <input type="search" autocomplete="off" class="form-control" id="response"
-                            placeholder="🔎  Enter city" autofocus="on" /> <button type="search" id="find"
-                            class="btn btn-primary mx-1">Search</button>
-                        <span class="secondaryButton" id="position">
-                            <button type="submit" class="btn btn-primary mb"> <span class="current-location-button"> My
-                                    Location <i class="fas fa-location-arrow"></i></span>
-                            </button>
-                </form>
+      <div class="container">
+        <div class="searchBar">
+          <form id="searching" class="form-inline">
+            <div class="form-group mb-2 mx-sm-3">
+              <input
+                type="search"
+                autocomplete="off"
+                class="form-control"
+                id="response"
+                placeholder="🔎  Enter city"
+                autofocus="on"
+              />
+              <button type="search" id="find" class="btn btn-primary mx-1">
+                Search
+              </button>
+              <span class="secondaryButton" id="position">
+                <button type="submit" class="btn btn-primary mb">
+                  <span class="current-location-button">
+                    My Location <i class="fas fa-location-arrow"></i
+                  ></span>
+                </button>
+              </span>
             </div>
+          </form>
+        </div>
 
-            <div class="fc">
-                <a class="btn btn-primary" href="#" id="celsiusButton" role="button">°C</a>
-                <a class="btn btn-primary" href="#" id="fahrenheitButton" role="button">°F</a>
+        <div class="fc">
+          <a class="btn btn-primary" href="#" id="celsiusButton" role="button"
+            >°C</a
+          >
+          <a
+            class="btn btn-primary"
+            href="#"
+            id="fahrenheitButton"
+            role="button"
+            >°F</a
+          >
+        </div>
+
+        <div class="row">
+          <div id="dateCity" class="col">
+            <span id="date"> </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="data">
+              <ul>
+                <li>
+                  Wind<br />
+                  <span id="wind"></span> mph
+                </li>
+                <br />
+                <li>
+                  Pressure <br />
+                  <span id="pressure"></span> in
+                </li>
+              </ul>
             </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <ul>
+              <h2>
+                <li class="city">Los Angeles</li>
+              </h2>
+            </ul>
+            <ul>
+              <li class="weatherIcon">
+                <img src="" id="icon" alt="" class="float-center" />
+              </li>
+              <li class="weather"></li>
+            </ul>
 
-            <div class="row">
-                <div class="col-4">
-                    <div class="data">
-                        <ul>
-                            </br>
-                            <li>Wind<br />
-                                <span id="wind"></span> mph </li></br>
-                            <ul>
-                                <li>Pressure </br>
-                                    <span id="pressure"></span> in</li>
-                    </div>
-                </div>
-
-                <div id="dateCity" div class="col-4">
-                    <ul>
-                        <li id="date"></li>
-                    </ul>
-                    <ul>
-                        <h2>
-                            <li class="city">Los Angeles</li>
-                        </h2>
-                    </ul>
-                    <ul>
-                        <div class="weatherIcon">
-                            <img src="" id="icon" alt="" class="float-center" />
-                            <li class="weather"></li>
-                    </ul>
-
-                    <ul>
-                        <li class="tempNow" id="tempNow">
-                        </li>
-
-                    </ul>
-                </div>
-
-                <div class="col-4">
-                    <div class="data">
-                        <div class="dataHumid">
-                            <ul>
-                                <br />
-                                <li>Humidity</br>
-                                    <span id="humidity"></span>%</li></br>
-                                <ul>
-                                    <li> Feels like</br> <span id="feelsLike"></span></li>
-                        </div>
-                    </div>
-                </div>
+            <ul>
+              <li class="tempNow" id="tempNow"></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="data">
+              <div class="dataHumid">
+                <ul>
+                  <li>
+                    Humidity<br />
+                    <span id="humidity"></span>%
+                  </li>
+                  <br />
+                  <li>
+                    Feels like<br />
+                    <span id="feelsLike"></span>
+                  </li>
+                </ul>
+              </div>
             </div>
-
-           <div class="row weather-forecast" id="forecast">
-                
+          </div>
         </div>
-        </div>
-        </div>
+      </div>
+        <div class="row weather-forecast" id="forecast"></div>
+      </div>
     </div>
-    
-    <div id= "endTag">Coded by Jacqueline Wooding</div>
+    <div id="endTag">Coded by Jacqueline Wooding</div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

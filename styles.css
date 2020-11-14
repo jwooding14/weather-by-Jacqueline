@@ -6,12 +6,10 @@
   border-color: black;
   border-radius: 3em;
   max-width: 800px;
-  max-height: 870px;
   background-image: url(https://images.pexels.com/photos/1367180/pexels-photo-1367180.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 }
 
 li {
-  white-space: nowrap;
   text-align: center;
   font-family: "Mukta", sans-serif;
   position: relative;
@@ -20,6 +18,7 @@ li {
 ul {
   list-style-type: none;
   text-align: center;
+  padding: 0;
 }
 
 .searchBar {
@@ -27,8 +26,6 @@ ul {
 }
 
 #dateCity {
-  margin-top: 40px;
-  margin-left: -20px;
   padding: 0px 0px 0px 0px;
   text-align: center;
 }
@@ -77,9 +74,10 @@ ul {
 }
 
 #date {
-  margin: -50px 0px 0px 0px;
+  margin: 0;
   font-size: 30px;
   text-align: center;
+  font-family: "Mukta", sans-serif;
 }
 
 .weather-forecast-temperature {
@@ -107,24 +105,18 @@ h3 {
 }
 
 .data {
-  text-align: left;
+  text-align: center;
   color: black;
-  margin: 100px 5px 5px -35px;
   font-family: "Mukta", sans-serif;
   font-weight: 600;
   font-size: 25px;
 }
 
-.dataHumid {
-  text-align: center;
-  margin-top: 0px;
-  color: black;
-  margin-right: -8px;
-}
 #endTag {
   text-align: center;
 }
 
 #forecast {
   display: flex;
+  padding: 0px 30px 30px 30px;
 }

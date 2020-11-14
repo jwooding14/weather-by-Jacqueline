@@ -76,7 +76,7 @@ function displayForecast(response) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += ` 
   
-                <div class="col-2">
+                <div class="col-6 col-md-2 text-center mb-4 mb-md-0">
                    <h3>
                   ${formatHours(forecast.dt * 1000)}
                    </h3>
@@ -89,7 +89,7 @@ function displayForecast(response) {
                         )}</span>° </strong><span class="forecast-min">${Math.round(
       forecast.main.temp_min
     )}</span>°
-                   
+                   </div>
                     </div>
                 </div> `;
   }
@@ -202,5 +202,3 @@ let celsiusClickButton = document.querySelector("#celsiusButton");
 celsiusClickButton.addEventListener("click", displayCelsiusTemp);
 
 searchCity("Los Angeles");
-
-console.log(searchCity);
