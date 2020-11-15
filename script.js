@@ -202,5 +202,3 @@ let celsiusClickButton = document.querySelector("#celsiusButton");
 celsiusClickButton.addEventListener("click", displayCelsiusTemp);
 
 searchCity("Los Angeles");
-
-console.log(tempNow);
