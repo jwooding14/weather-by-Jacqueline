@@ -5,7 +5,7 @@
   display: block;
   border-color: black;
   border-radius: 3em;
-  max-width: 800px;
+  max-width: 767px;
   background-image: url(https://images.pexels.com/photos/1367180/pexels-photo-1367180.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 }
 
@@ -22,12 +22,12 @@ ul {
 }
 
 .searchBar {
-  padding: 30px 20px 20px 20px;
+  padding: 30px 5px 0px 20px;
 }
 
 #dateCity {
-  padding: 0px 0px 0px 0px;
   text-align: center;
+  font-family: "Mukta", sans-serif;
 }
 
 #pst {
@@ -49,14 +49,13 @@ ul {
 }
 
 .city {
-  padding: 0 auto;
   font-weight: 700;
-  font-size: 30px;
   color: black;
   text-transform: capitalize;
   white-space: nowrap;
   font-size: 40px;
   text-align: center;
+  font-family: "Mukta", sans-serif;
 }
 
 .weather {
@@ -64,10 +63,10 @@ ul {
   font-weight: 200;
   font-size: 35px;
   text-transform: capitalize;
+  font-family: "Mukta", sans-serif;
 }
 
 .tempNow {
-  padding: 0px 0px 20px 0px;
   font-size: 70px;
   text-align: center;
   font-weight: normal;
@@ -82,6 +81,7 @@ ul {
 
 .weather-forecast-temperature {
   font-size: 25px;
+  font-family: "Mukta", sans-serif;
 }
 
 .forecast-max {
@@ -118,5 +118,5 @@ h3 {
 
 #forecast {
   display: flex;
-  padding: 0px 30px 30px 30px;
+  padding: 0px 20px 20px 20px;
 }
