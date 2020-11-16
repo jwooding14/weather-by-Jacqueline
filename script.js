@@ -67,34 +67,6 @@ function search(event) {
 let searchingNow = document.querySelector("#searching");
 searchingNow.addEventListener("submit", search);
 
-function displayForecast(response) {
-  let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = null;
-  let forecast = null;
-
-  for (let index = 0; index < 6; index++) {
-    forecast = response.data.list[index];
-    forecastElement.innerHTML += ` 
-  
-                <div class="col-6 col-md-2 text-center mb-4 mb-md-0">
-                   <h3>
-                  ${formatHours(forecast.dt * 1000)}
-                   </h3>
-                        <img src="http://openweathermap.org/img/wn/${
-                          forecast.weather[0].icon
-                        }@2x.png"/> 
-
-                        <div class="weather-forecast-temperature"><strong><span class="forecast-max">${Math.round(
-                          forecast.main.temp_max
-                        )}</span>° </strong><span class="forecast-min">${Math.round(
-      forecast.main.temp_min
-    )}</span>°
-                   </div>
-                    </div>
-                </div> `;
-  }
-}
-
 function searchCity(city) {
   let key = "c2a0308255fedbe7dd192fcd88e7b405";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=imperial`;
@@ -108,6 +80,8 @@ function searchLocation(position) {
   let key = "c2a0308255fedbe7dd192fcd88e7b405";
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${key}&units=imperial`;
   axios.get(url).then(showTemperature);
+  url = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${key}&units=imperial`;
+  axios.get(url).then(displayForecast);
 }
 
 function getCurrentLocation(event) {
@@ -141,6 +115,32 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
   let currentCity = document.querySelector(".city");
   currentCity.innerHTML = response.data.name;
+}
+
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+  for (let index = 0; index < 6; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += ` 
+  
+                <div class="col-6 col-md-2 text-center mb-4 mb-md-0">
+                   <h3>
+                  ${formatHours(forecast.dt * 1000)}
+                   </h3>
+                        <img src="http://openweathermap.org/img/wn/${
+                          forecast.weather[0].icon
+                        }@2x.png"/> 
+
+                        <div class="weather-forecast-temperature"><strong>${Math.round(
+                          forecast.main.temp_max
+                        )}° </strong>${Math.round(forecast.main.temp_min)}°
+                   
+                    </div>
+                </div> `;
+  }
 }
 
 let currentLocationButton = document.querySelector(".current-location-button");
